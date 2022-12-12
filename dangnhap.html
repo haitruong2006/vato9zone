@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/dangnhap.css" >
+    <script src="https://kit.fontawesome.com/54f0cb7e4a.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+
+    <div class="container">
+      <form action="" class="form-login">
+          <h1>Đăng Nhập</h1>
+          <div class="form-text">
+            <label>Username</label>
+            <input type="text">
+          </div>
+          <div class="form-text">
+            <label>Password</label>
+            <input type="password">
+          </div>
+          <button>Đăng Nhập</button>
+          <span>Bạn Chưa Có Tài Khoản? Đăng Ký <a href="">Tại Đây</a></span>
+        </form>
+    </div>
+    <script>
+      const formlogin = document.querySelectorAll('.form-text input')
+      const formlabel = document.querySelectorAll('.form-text label')
+      for(let i = 0;i<2;i++){
+        formlogin[i].addEventListener("mouseover",function(){
+          formlabel[i].classList.add("focus")
+        })
+        formlogin[i].addEventListener("mouseout",function(){
+          if(formlogin[i].value == ""){
+            formlabel[i].classList.remove("focus")
+          } 
+        })
+      }
+    </script>
+  </body>
+</html>
